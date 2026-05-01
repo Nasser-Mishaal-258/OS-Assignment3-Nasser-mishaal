@@ -45,12 +45,9 @@ class SharedResources {
 
 // Lock for protecting execution log
     public static final ReentrantLock logLock = new ReentrantLock();
-
-// Semaphore to control CPU access (1 process at a time)
-    public static final Semaphore cpuSemaphore = new Semaphore(1);
     // TODO #2: Add a Semaphore to limit concurrent process execution
     // Example: public static final Semaphore cpuSemaphore = new Semaphore(1);
-
+    public static final Semaphore cpuSemaphore = new Semaphore(1);
     // Method to increment context switch counter
     public static void incrementContextSwitch() {
         // TODO: Protect this critical section with a lock
